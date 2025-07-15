@@ -1,0 +1,814 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    height: 72px;
+    box-sizing: border-box;
+    background: rgba(255, 251, 232, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 251, 232, 0.3);
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 70px;
+    z-index: 0;
+}
+
+.nav-item {
+    font-size: 18px;
+    color: #6d5c4d;
+    cursor: pointer;
+    position: relative;
+    background: none;
+    border: none !important;
+    font-family: inherit;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 20px;
+    padding: 8px 18px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    color: #222;
+    box-shadow: 0 4px 12px 0 #e7cfa7;
+    transform: scale(1.2);
+}
+
+
+
+.main-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.ProjectsCards {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    overflow-x: auto;
+    padding: 34px 0 27px 40px;
+    scrollbar-width: auto;
+    scrollbar-color: #e7cfa7 #faf7f2;
+    -ms-overflow-style: auto;
+    justify-content: center;
+}
+
+.ProjectsCards::-webkit-scrollbar {
+    height: 12px;
+    background: #faf7f2;
+}
+
+.ProjectsCards::-webkit-scrollbar-thumb {
+    background: #e7cfa7;
+    border-radius: 8px;
+    border: 2px solid #faf7f2;
+}
+
+.ProjectsCards::-webkit-scrollbar-track {
+    background: #faf7f2;
+    border-radius: 8px;
+    border: 1px solid #e7cfa7;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-width: 369px;
+    max-width: 409px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e7cfa7;
+    border: 1.5px solid #e7cfa7;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.project-card + .project-card {
+    border-left: none;
+    margin-left: 32px;
+}
+
+.card-img {
+    width: 78px;
+    height: 47px;
+    object-fit: cover;
+    border-radius: 0 0 0 16px;
+    flex-shrink: 0;
+    margin: 0;
+    background: #eee;
+}
+
+.card-content {
+    flex: 1;
+    padding: 8px 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #222;
+    margin: 0 12px 0 0;
+    font-family: "Bona Nova SC", serif;
+}
+
+.card-arrow {
+    color: #ff7f32;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 8px;
+    margin-top: 2px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.card-arrow:hover {
+    color: #ff5500;
+    transform: scale(1.15) translateY(-2px);
+}
+
+.card-location {
+    font-size: 0.98rem;
+    color: #888;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.location-icon {
+    font-size: 0.8em;
+    color: #ff7f32;
+    margin-right: 4px;
+}
+
+.card-location a {
+    color: #ff7f32;
+    text-decoration: underline;
+    font-size: 0.98rem;
+}
+
+.card-desc {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    border: 1.2px solid #bbb;
+    border-radius: 6px;
+    padding: 3px 12px;
+    font-size: 0.85rem;
+    color: #444;
+    background: #faf7f2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    .project-card {
+        min-width: 90vw;
+        max-width: 98vw;
+        flex-direction: column;
+    }
+    .card-img {
+        width: 100%;
+        height: 180px;
+        border-radius: 16px 16px 0 0;
+    }
+    .card-content {
+        padding: 18px 12px;
+    }
+}
+
+.ProjectSectionHeader {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-top: -60px;
+    pointer-events: none;
+}
+
+.projects-header-box {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+    background: #fffbe9;
+    padding: 18px 48px;
+    border-radius: 18px;
+    margin: 32px 0 18px 0;
+    box-shadow: 0 4px 18px #e7cfa7;
+    font-family: "Bona Nova SC", serif;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.footer-section {
+    background: #fcfbfa;
+    padding: 48px 0 32px 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-about h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 18px;
+    font-family: "Bona Nova SC", serif;
+}
+
+.footer-about p {
+    color: #222;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    background: #fff6e6;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 2px 8px #ffe3c2;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px #ffd7a0;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 18px;
+    font-family: "Bona Nova SC", serif;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-links ul li {
+    margin-bottom: 0;
+}
+
+.footer-links ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff7f32;
+    text-decoration: underline;
+}
+
+.footer-contact ul li {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-contact .footer-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+        max-width: 98vw;
+        padding: 0 16px;
+    }
+    .footer-column {
+        min-width: 0;
+    }
+}
+
+.skills-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-top: 24px;
+    pointer-events: none;
+}
+
+.skills-header-box {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+    background: #fffbe9;
+    padding: 18px 48px;
+    border-radius: 18px;
+    margin: 32px 0 18px 0;
+    box-shadow: 0 4px 18px #e7cfa7;
+    font-family: "Bona Nova SC", serif;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skills-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.skill-sets {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px #e7cfa7;
+    border: 2px solid #e7cfa7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-sets:hover {
+    transform: scale(1.2) rotate(360deg);
+    box-shadow: 0 8px 24px #d4b88a;
+}
+
+.skill-sets img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skill-sets:hover img {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.java-skill::after {
+    content: "JAVA";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Bona Nova SC", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.mysql-skill::after {
+    content: "MySQL";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Bona Nova SC", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.html-skill::after {
+    content: "HTML";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Bona Nova SC", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.css-skill::after {
+    content: "CSS";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Bona Nova SC", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.js-skill::after {
+    content: "JS";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Bona Nova SC", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.skill-sets:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .skill-sets {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skill-sets img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.typewriter-text {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    background: transparent;
+    padding: 30px 48px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.typewriter-text {
+    font-size: 2.15rem;
+    font-weight: bold;
+    color: #222;
+    /* font-family: "Bona Nova SC", serif; */
+    font-family: "Bitcount Grid Double", system-ui;
+    letter-spacing: 2px;
+    background: transparent;
+    pointer-events: auto;
+}
+
+/* type writter effect */
+
+.typewriter-text > span {
+    display:grid;
+    overflow: hidden;
+    height:1.2em;
+}
+.typewriter-text span span {
+    width:0%;
+    max-width:max-content;
+    overflow: hidden;
+    height:inherit;
+    word-break:break-all;
+    animation:
+      c 0.5s infinite steps(1),  
+      t 2s linear infinite alternate,
+      m 8s steps(2) infinite;
+  }
+  .typewriter-text span span:before {
+    content:" ";
+    display:inline-block;
+  }
+  @keyframes t{
+    90%,100% {width:100%}
+  }
+  @keyframes c{
+    0%,100%{box-shadow:5px 0 0 #0000}
+    50%    {box-shadow:5px 0 0 red }
+  }
+  @keyframes m{
+    100% {transform:translateY(-200%)}
+  }
+
+/* Sidebar 3D Navbar Links */
+.navbar-links-3d {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none !important;
+    height: 72px;
+    z-index: 1;
+}
+
+.navbar-links-3d li {
+    position: relative;
+    width: 70px;
+    min-height: 48px;
+    margin: 0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: all .4s ease-out;
+    overflow: visible;
+    perspective: 400px;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.icon-label-container {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-label-container .nav-icon,
+.icon-label-container .label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: opacity 0.3s, transform 0.5s cubic-bezier(.4,2,.6,1), filter 0.3s;
+}
+
+.icon-label-container .nav-icon {
+    z-index: 2;
+    opacity: 1;
+    transform: rotateY(0deg) translateX(0);
+}
+
+.icon-label-container .label {
+    z-index: 1;
+    opacity: 0;
+    color: #222;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    padding: 0 8px;
+    text-align: center;
+    transform: rotateY(90deg) translateX(0);
+    pointer-events: none;
+}
+
+.navbar-links-3d li:hover .icon-label-container .nav-icon {
+    opacity: 0;
+    filter: blur(2px);
+    transform: rotateY(-90deg) translateX(-40px);
+}
+
+.navbar-links-3d li:hover .icon-label-container .label {
+    opacity: 1;
+    transform: rotateY(0deg) translateX(0);
+    z-index: 3;
+    transition-delay: 0.05s;
+    box-shadow: none !important;
+}
+
+/* Remove old :after label styles */
+.navbar-links-3d li:after,
+.navbar-links-3d li.home:after,
+.navbar-links-3d li.projects:after,
+.navbar-links-3d li.skills:after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Adjust icon size for sidebar */
+.navbar-links-3d .nav-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.resume-icon {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.25s cubic-bezier(0.4,2,0.6,1);
+    will-change: transform;
+}
+.resume-icon:hover {
+    transform: scale(1.35);
+    z-index: 10;
+}
+
+.resume-tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+.resume-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 14px;
+    position: absolute;
+    z-index: 999;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    pointer-events: none;
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    white-space: nowrap;
+}
+.resume-tooltip-container:hover .resume-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+@media (max-width: 900px) {
+    .navbar-links-3d {
+        gap: 18px;
+        height: 56px;
+    }
+    .navbar-links-3d li {
+        width: 48px;
+        min-height: 32px;
+    }
+    .icon-label-container {
+        width: 32px;
+        height: 32px;
+    }
+    .navbar-links-3d .nav-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .icon-label-container .label {
+        font-size: 0.9rem;
+        padding: 0 4px;
+        width: 32px;
+        height: 32px;
+    }
+}

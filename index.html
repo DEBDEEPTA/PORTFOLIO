@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY_PORTFOLIO</title>
+    <!-- google Fonts Linkin -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Extenal css linkin -->
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-links-3d">
+            <li class="nav-item home">
+                <a href="#home-main">
+                    <span class="icon-label-container">
+                        <img src="MEDIA/ICONS/home.png" class="nav-icon" alt="home">
+                        <span class="label">Home</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item projects">
+                <a href="#my-projects">
+                    <span class="icon-label-container">
+                        <img src="MEDIA/ICONS/info.png" class="nav-icon" alt="projects">
+                        <span class="label">Projects</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item skills">
+                <a href="#my-skills">
+                    <span class="icon-label-container">
+                        <img src="MEDIA/ICONS/layers.png" class="nav-icon" alt="skills">
+                        <span class="label">Skills</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+     <!-- main content -->
+    <main class="main-section" id="home-main">
+        <video class="background-video" src="MEDIA/MAIN_BACKGROUND.mp4" autoplay loop muted playsinline></video>
+
+        <section class="type-writter">
+
+            <span class="typewriter-text">
+                <span>
+                    <span>WELCOME TO MY PORTFOLIO</span>
+                    <span>I AM A FULL STACK DEVELOPER</span>
+                </span>
+            </span>
+
+
+        </section>
+        <!-- Resume anchor icon -->
+        <div style="display: flex; justify-content: center; align-items: center; margin: 40px 0; padding-top: 200px;">
+            <a href="DEV_RESUME.pdf" id="resume-link" style="display: inline-block;">
+                <span class="resume-tooltip-container">
+                    <img src="MEDIA/ICONS/resume_icon.png" alt="Resume" class="resume-icon" />
+                    <span class="resume-tooltip">Download Resume</span>
+                </span>
+            </a>
+        </div>
+    </main>
+    <!-- project cards Headersection -->
+    <section class="ProjectSectionHeader" id="my-projects">
+        <div class="projects-header-box">MY PROJECTS</div>
+    </section>
+
+    <!-- project cards section -->
+    <section class="ProjectsCards">
+        <!-- project card 1 -->
+        <div class="project-card">
+            <img class="card-img" src="MEDIA/ICONS/home.png" alt="Project 1">
+            <div class="card-content">
+                <div class="card-header">
+                    <h3 class="card-title">GLOBAL SOURCES FASHION SHOW...</h3>
+                    <a href="#" class="card-arrow">&#8599;</a>
+                </div>
+                <div class="card-location">
+                    <span class="location-icon">&#9679;</span> AsiaWorld-Expo, <a href="#">Hong Kong</a>
+                </div>
+                <div class="card-desc">
+                    Specialist sourcing for innovative, customized and eco-friendly apparel, accessories, and textiles
+                </div>
+                <div class="card-tags">
+                    <span class="tag">TRADESHOW</span>
+                    <span class="tag">FASHION</span>
+                    <span class="tag">BEAUTY</span>
+                </div>
+            </div>
+        </div>
+        <!-- project card 2 -->
+        <div class="project-card">
+            <img class="card-img" src="MEDIA/ICONS/info.png" alt="Project 2">
+            <div class="card-content">
+                <div class="card-header">
+                    <h3 class="card-title">HKTDC HONG KONG INTERNATIONA...</h3>
+                    <a href="#" class="card-arrow">&#8599;</a>
+                </div>
+                <div class="card-location">
+                    <span class="location-icon">&#9679;</span> Hong Kong Convention and Exhibition Centre, HONGKONG
+                </div>
+                <div class="card-desc">
+                    The HKTDC Hong Kong International Jewellery Show is the perfect destination for international and
+                    regional jewelry manufacturers, w...
+                </div>
+                <div class="card-tags">
+                    <span class="tag">ART & CRAFT</span>
+                    <span class="tag">FASHION</span>
+                    <span class="tag">BEAUTY</span>
+                </div>
+            </div>
+        </div>
+        <!-- project card 3 -->
+        <div class="project-card">
+            <img class="card-img" src="MEDIA/ICONS/layers.png" alt="Project 3">
+            <div class="card-content">
+                <div class="card-header">
+                    <h3 class="card-title">ASD MARKET WEEK</h3>
+                    <a href="#" class="card-arrow">&#8599;</a>
+                </div>
+                <div class="card-location">
+                    <span class="location-icon">&#9679;</span> Las Vegas Convention Center, Las Vegas, USA
+                </div>
+                <div class="card-desc">
+                    ASD Market Week, the most comprehensive trade show for consumer merchandise in the United States.
+                    Our show is held twic...
+                </div>
+                <div class="card-tags">
+                    <span class="tag">APPAREL & CLOTHING</span>
+                    <span class="tag">FASHION</span>
+                    <span class="tag">BEAUTY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills header section -->
+    <section class="skills-header" id="my-skills">
+        <div class="skills-header-box">MY SKILLS</div>
+    </section>
+    <!-- Skills cards section -->
+    <section class="skills-cards">
+        <div class="skill-sets java-skill">
+            <img src="MEDIA/ICONS/java_Icon.png" alt="Java">
+        </div>
+
+        <div class="skill-sets mysql-skill">
+            <img src="MEDIA/ICONS/mysql_Icon.png" alt="mysql">
+        </div>
+
+
+        <div class="skill-sets html-skill">
+            <img src="MEDIA/ICONS/html_Icon.png" alt="html">
+        </div>
+
+
+        <div class="skill-sets css-skill">
+            <img src="MEDIA/ICONS/css_Icon.png" alt="css">
+        </div>
+
+        <div class="skill-sets js-skill">
+            <img src="MEDIA/ICONS/javascript_icon.png" alt="Js">
+        </div>
+
+
+
+    </section>
+
+    <!-- fotter section -->
+    <section class="footer-section">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h3>About Me</h3>
+                <p>Recent Computer Science Graduate with a Strong Foundation in Java, J2EE, Programming, MySQL, HTML
+                    CSS, JavaScript.</p>
+
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://github.com/DEBDEEPTA" target="_blank" class="footer-social"><img
+                                src="MEDIA/ICONS/github.png" alt="github" /></a></li>
+                    <li><a href="https://in.linkedin.com/in/debdeepta-samui-322232373" target="_blank"
+                            class="footer-social"><img src="MEDIA/ICONS/Linkdin.png" alt="LinkedIn" /></a></li>
+                    <li><a href="mailto:askdev2003@gmail.com" class="footer-social" target="_blank"><img
+                                src="MEDIA/ICONS/mail.png" alt="mail"></a></li>
+                    <li><a href="https://wa.me/918001334960" class="footer-social" target="_blank"><img
+                                src="MEDIA/ICONS/whatsap.png" alt="Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/dev2oo3/profilecard/?igsh=aXFtNnM4ZjgzaXU5" target="_blank"
+                            class="footer-social"><img src="MEDIA/ICONS/instagram.png" alt="Instagram" /></a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact">
+                <h3>Contact Me</h3>
+                <ul>
+                    <li><img src="MEDIA/ICONS/phone-call.png" alt="Phone" class="footer-icon" />+ 91 800-133-4960</li>
+                    <li><img src="MEDIA/ICONS/mail.png" alt="Mail" class="footer-icon" /> askdev2003@gmail.com</li>
+
+                    <li><img src="MEDIA/ICONS/home.png" alt="Location" class="footer-icon" />Hanumant Gowda
+                        Road,Saptagiri Layout,Chikkabanavara,Bangalore,560090</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
